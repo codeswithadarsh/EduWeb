@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+
+
+   <!-- ---------Chatpp--------- -->
+
+
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #notes {
+      width: 98%;
+      height: 200px;
+      resize: vertical;
+      border: 1px solid #2666be;
+      padding: 5px;
+    }
+
+    .noteapp{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px;
+    }
+    .notetitle{
+        margin: 10px;
+        padding-left: 10px
+    }
+
+    .notebutton{
+
+       
+        background-color: #2666be;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .clearbutton{
+
+        background-color: #b7081a;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .savebutton{
+      margin-left: 45px;
+        background-color: #09ab3d;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+/* ----------mARQUE--------- */
+.marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 50px;
+        margin-left: 30%;
+    }
+
+    .marquee {
+        display: inline-block;
+        animation: marquee 2s linear infinite;
+        font-size: 20px;
+        color: red;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(20%);
+        }
+    }
+
+
+  </style>
+
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">EduWeb</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <a href="contact.html">
+            <div id="menu-btn" class="fas fa-headset"></div>
+        </a>        
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Adarsh Pandey</h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <!-- <a href="login.html" class="option-btn">login</a> -->
+            <a href="#" class="option-btn" style="background-color: rgb(52, 151, 52) !important;">Sucessfully LogedIn ☑️</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Adarsh Pandey</h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+    <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+    <a href="note.html"><i class="fas fa-book"></i><span>Notes</span></a>
+    <a href="compiler.html"><i class="fas fa-skiing"></i><span>Gym</span></a>
+    <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+    <a href="workshop.html"><i class="fas fa-tools"></i><span>Workshop</span></a>
+    <a href="contact.html"><i class="fas fa-headset"></i><span>General Help</span></a>
+    <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+
+ </nav>
+
+</div>
+
+<h1 class="notetitle">Write Your Notes and Export in .txt files</h1>
+
+<div class="noteapp">
+
+
+  <textarea id="notes" placeholder="Write your notes here..."></textarea><br>
+
+</div>
+
+  
+  <button class="savebutton" onclick="saveNotes()">Save Notes</button>
+<button class="clearbutton" onclick="clearNotes()">Clear Notes</button>
+<button class="notebutton" onclick="exportNotes()">Export Notes</button>
+
+
+  <div class="marquee-container">
+    <div class="marquee">
+        Hurrey, New Features is comming for you soon...
+    </div>
+</div>
+
+
+
+
+<button class="chatbot-toggler">
+   <span class="material-symbols-rounded">mode_comment</span>
+   <span class="material-symbols-outlined">close</span>
+ </button>
+ <div class="chatbot">
+   <header>
+     <h2>Chatbot</h2>
+     <span class="close-btn material-symbols-outlined">close</span>
+   </header>
+   <ul class="chatbox">
+     <li class="chat incoming">
+       <span class="material-symbols-outlined">smart_toy</span>
+       <p>Hi there 👋<br>How can I help you today?</p>
+     </li>
+   </ul>
+   <div class="chat-input">
+     <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+     <span id="send-btn" class="material-symbols-rounded">send</span>
+   </div>
+ </div>
+
+<!-- --------------Notes------------ -->
+ <script>
+    function exportNotes() {
+      const notesContent = document.getElementById('notes').value;
+      const blob = new Blob([notesContent], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'notes.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+
+    // Function to save notes to local storage
+function saveNotes() {
+    const notesContent = document.getElementById('notes').value;
+    localStorage.setItem('notes', notesContent);
+    alert('Notes saved!');
+}
+
+// Function to load notes from local storage
+function loadNotes() {
+    const savedNotes = localStorage.getItem('notes');
+    if (savedNotes) {
+        document.getElementById('notes').value = savedNotes;
+    }
+}
+
+// Function to clear notes from local storage and textarea
+function clearNotes() {
+    localStorage.removeItem('notes');
+    document.getElementById('notes').value = '';
+    alert('Notes cleared!');
+}
+
+// Load notes when the document is ready
+document.addEventListener('DOMContentLoaded', loadNotes);
+
+  </script>
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>
