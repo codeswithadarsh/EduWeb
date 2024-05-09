@@ -19,7 +19,7 @@
    
    <section class="flex">
 
-      <a href="index.html" class="logo">Educa.</a>
+      <a href="index.html" class="logo">EduWeb</a>
 
       <form action="search.html" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
@@ -35,13 +35,16 @@
 
       <div class="profile">
          <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">shaikh anas</h3>
-         <p class="role">studen</p>
+         <h3 class="name">Adarsh Pandey</h3>
+         <p class="role">student</p>
          <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
+         
+         <div class="flex-btn" id="auth-buttons">
             <a href="login.html" class="option-btn">login</a>
             <a href="register.html" class="option-btn">register</a>
-         </div>
+            <a href="#" class="option-btn" id="logout-btn" style="display: none;">logout</a>
+        </div>
+        
       </div>
 
    </section>
@@ -56,8 +59,8 @@
 
    <div class="profile">
       <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">shaikh anas</h3>
-      <p class="role">studen</p>
+      <h3 class="name">Adarsh Pandey</h3>
+      <p class="role">student</p>
       <a href="profile.html" class="btn">view profile</a>
    </div>
 
@@ -76,29 +79,17 @@
 </div>
 
 <section class="form-container">
-
-   <form action="" method="post" enctype="multipart/form-data">
-      <h3>login now</h3>
-      <p>your email <span>*</span></p>
-      <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
-      <p>your password <span>*</span></p>
-      <input type="password" name="pass" placeholder="enter your password" required maxlength="20" class="box">
-      <input type="submit" value="login new" name="submit" class="btn">
+   <form id="loginForm">
+       <h3>Login now</h3>
+       <p>Name <span>*</span></p>
+       <input type="text" name="name" placeholder="enter your name" required maxlength="50" class="box">
+       <p>Your email <span>*</span></p>
+       <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
+       <p>Your password <span>*</span></p>
+       <input type="password" name="pass" placeholder="enter your password" required maxlength="20" class="box">
+       <input type="button" value="Login" onclick="login()" class="btn">
    </form>
-
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -109,6 +100,7 @@
 </footer>
 
 <!-- custom js file link  -->
+<script src="js/auth.js"></script>
 <script src="js/script.js"></script>
 
    

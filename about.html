@@ -46,10 +46,11 @@
          <h3 class="name">Adarsh Pandey</h3>
          <p class="role">student</p>
          <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <!-- <a href="login.html" class="option-btn">login</a> -->
-            <a href="register.html" class="option-btn" style="background-color: rgb(52, 151, 52) !important;">Sucessfully LogedIn ☑️</a>
-         </div>
+         <div class="flex-btn" id="auth-buttons">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="signup.html" class="option-btn">signup</a>
+            <a href="#" class="option-btn" id="logout-btn" style="display: none;">logout</a>
+        </div>
       </div>
 
    </section>
@@ -288,6 +289,7 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/auth.js"></script>
 
    
 </body>

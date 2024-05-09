@@ -38,7 +38,7 @@
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
-         <a href="contact.html">
+         <a href="https://neuraai.vercel.app/" target="_blank">
             <div id="menu-btn" class="fas fa-headset"></div>
         </a>        
          <div id="search-btn" class="fas fa-search"></div>
@@ -51,10 +51,12 @@
          <h3 class="name">Adarsh Pandey</h3>
          <p class="role">student</p>
          <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <!-- <a href="login.html" class="option-btn">login</a> -->
-            <a href="#" class="option-btn" style="background-color: rgb(52, 151, 52) !important;">Sucessfully LogedIn ☑️</a>
-         </div>
+         <div class="flex-btn" id="auth-buttons">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="signup.html" class="option-btn">signup</a>
+            <a href="#" class="option-btn" id="logout-btn" style="display: none;">logout</a>
+        </div>
+        
       </div>
 
    </section>
@@ -115,7 +117,7 @@
             <p class="likes"><span>2. </span>Microsoft SDE Intern 2024</p>
             <p class="likes"><span>3. </span>Google is Hiring For SDEI</p>
             <p class="likes"><span>4. </span>Adobe is hiring for DevOps Engineer - 2024 Batch</p>
-            <p class="likes"><span>5. </span>TCS is Hiring for Frontend Developer</p>
+            <p class="likes"><span>5. </span>TCS is Hiring for Frontend Developer  <a href="portal.html" class="viewbtn">View All</a></p>
 
             <!-- <a href="#"><i class="fas fa-code"></i><span>development</span></a>
             <a href="#"><i class="fas fa-chart-simple"></i><span>business</span></a>
@@ -308,6 +310,7 @@
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
+<script src="js/auth.js"></script>
 
    
 </body>
