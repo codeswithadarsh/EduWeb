@@ -95,7 +95,7 @@ section{
    color: #2666bf;
    border: 2px solid #2666bf;
    padding: 2px;
-   font-size: 15px;
+   font-size: 12px;
    border-radius: 5px;
 
 }
@@ -1401,3 +1401,59 @@ section{
  .blinking-emoji {
    animation: blink 1s infinite;
  }
+
+
+
+
+
+
+
+ /* ------------------------------ */
+
+ #jobTitlesList li {
+   color: var(--light-color);
+   font-size: 1.7rem;
+   margin-top: 1.5rem;
+   margin-left: 7px;
+}
+
+/* View All Button */
+.inline-btn.view-all {
+   display: inline-block;
+   margin-top: 2rem;
+   padding: 1rem 2.5rem;
+   border-radius: .5rem;
+   background-color: var(--main-color);
+   color: #fff;
+   font-size: 1.6rem;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+}
+
+.job-link {
+   color:  var(--light-color);
+   text-decoration: none;
+ }
+ 
+ .job-link:hover {
+   color: blue;
+   text-decoration: none;
+ }
+ 
+ .news-link {
+   color: var(--light-color);
+   text-decoration: none;
+}
+
+.news-link:hover {
+   color: blue;
+   text-decoration: underline;
+}
+
+#trendingNewsList li {
+   color: var(--light-color);
+   font-size: 1.7rem;
+   margin-top: 1.5rem;
+   margin-left: 7px;
+}
